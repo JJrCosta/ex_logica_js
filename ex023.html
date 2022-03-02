@@ -11,7 +11,7 @@
         {
             height: 100vh;
         }
-        p
+        p.descrip
         {
             margin-top: 20vh;
             padding-inline: 10px;
@@ -20,24 +20,30 @@
         {
             text-align: center;
         }
+        div.genero
+        {
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+        }
     </style>
 </head>
 <body>
     <div class="wrapper">
         <header>
                 <nav>
-                    <h1 style="margin: 0;">Exercício 012</h1>
+                    <h1 style="margin: 0;">Exercício 023</h1>
                 </nav>
         </header>
         <section class="exercicios">
-            <p>Numa promoção exclusiva para o Dia da Mulher, uma loja quer dar descontos
-                para todos, mas especialmente para mulheres. Faça um programa que leia nome,
-                sexo e o valor das compras do cliente e calcule o preço com desconto. Sabendo
-                que:
-                - Homens ganham 5% de desconto
-                - Mulheres ganham 13% de desconto</p>
+            <p class="descrip">Numa promoção exclusiva para o Dia da Mulher, uma loja quer dar descontos para todos, mas especialmente para mulheres. Faça um programa que leia nome, sexo e o valor das compras do cliente e calcule o preço com desconto.</p>
             <div class="barra_imput">
                 <input class="barra_imput" type="number" name="val" placeholder="Valor do Produto" autofocus>
+                <p style="text-align: center; margin: 15px;">Gênero</p>
+                <div class="genero">
+                    <p><input class="gen" type="radio" name="M" id="M" value="M"/> Masculino</p>
+                    <p><input class="gen" type="radio" name="F" id="F" value="F"/> Feminino</p>
+                </div>
             </div>
             <button class="botao" name="botao" type="submit" title="calcular" onclick="calcular()">Calcular</button>
             <div class="resultado">
@@ -47,20 +53,26 @@
 </body>
         <footer>
             <nav>
-                <a href="ex011.html"><img src="./imgs/back.png" alt="GitHub"></a>
+                <a href="ex022.html"><img src="./imgs/back.png" alt="GitHub"></a>
                 <a href="index.html"><img src="./imgs/Home.png" alt="Facebook"></a>
-                <a href="ex013.html"><img src="./imgs/next.png" alt="Twitter"></a>
+                <a href="ex024.html"><img src="./imgs/next.png" alt="Twitter"></a>
             </nav>
         </footer>
     </div>
     <script>
+        const msg = document.querySelector('div.resultado');
         function calcular() {
             let val = document.querySelector('input.barra_imput').value;
+            let gen = document.getElementsByClassName('gen').value;
             val = Number(val);
-            let desc = val * 0.05;
-            let val2 = val - desc;
-            let msg = document.querySelector('div.resultado');
-            msg.innerHTML = `PRODUTO EM PROMOÇÂO!<br/> Valor cheio: R$ ${val.toFixed(2)}<br/> Você recebeu R$ ${desc.toFixed(2)} de desconto e seu produto sairá por: <br/>R$ ${val2.toFixed(2)}`;
+            if (gen === F) {
+                
+            msg.innerHTML = `R$ ${val.toFixed(2)}`;
+            } else {
+                
+            }
+            
+            
         }
     </script>
 </body>
