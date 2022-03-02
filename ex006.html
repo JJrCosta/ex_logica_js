@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        div.wrapper
+        {
+            height: 100vh;
+        }
+        p
+        {
+            margin-top: 20vh;
+        }
+        input
+        {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+                <nav>
+                    <h1 style="margin: 0;">Exercício 006</h1>
+                </nav>
+        </header>
+        <section class="exercicios">
+            <p>Programa que lê um número inteiro e mostra o seu antecessor e seu sucessor.</p>
+            <input class="barra_imput" type="number" name="n" id="n" placeholder="Digite um número" autofocus>
+            <button class="botao" name="botao" type="submit" title="Clique Aqui" onclick="exibir()">Clique</button>
+            <div class="resultado" id="ex006">
+
+            </div>
+        </section>
+</body>
+        <footer>
+            <nav>
+                <a href="ex005.html"><img src="./imgs/back.png" alt="GitHub"></a>
+                <a href="index.html"><img src="./imgs/Home.png" alt="Facebook"></a>
+                <a href="ex007.html"><img src="./imgs/next.png" alt="Twitter"></a>
+            </nav>
+        </footer>
+    </div>
+    <script>
+        function exibir() {
+            let n = document.getElementById('n').value;
+            n = Number(n);
+            let ant = n-1;
+            let sus = n+1;
+            let msg = document.getElementById('ex006');
+            msg.innerHTML = `O antecessor de ${n} é ${ant} e seu sucessor é ${sus}.`;
+        }
+    </script>
+</body>
+</html>

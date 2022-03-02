@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        div.wrapper
+        {
+            height: 100vh;
+        }
+        p
+        {
+            margin-top: 20vh;
+            padding-inline: 10px;
+        }
+        input
+        {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+                <nav>
+                    <h1 style="margin: 0;">Exercício 018</h1>
+                </nav>
+        </header>
+        <section class="exercicios">
+            <p>Programa que lê o ano de nascimento de uma pessoa, calcula a idade dela e mostra se ela pode ou não votar.</p>
+            <div class="barra_imput">
+                <input class="barra_imput" type="number" name="ano" id="ano" placeholder="Ano de Nascimento" autofocus>
+            </div>
+            <button class="botao" name="botao" type="submit" title="verificar" onclick="verificar()">Verificar</button>
+            <div class="resultado">
+
+            </div>
+        </section>
+</body>
+        <footer>
+            <nav>
+                <a href="ex017.html"><img src="./imgs/back.png" alt="GitHub"></a>
+                <a href="index.html"><img src="./imgs/Home.png" alt="Facebook"></a>
+                <a href="ex019.html"><img src="./imgs/next.png" alt="Twitter"></a>
+            </nav>
+        </footer>
+    </div>
+    <script>        
+        const msg = document.querySelector('div.resultado');
+        function verificar() {
+            let ano = document.getElementById('ano').value;
+            ano = Number(ano);
+            let idade = 2022 - ano
+            if (idade >= 16) {
+                msg.innerHTML = `Você já tem ${idade} anos.<br/> Já está apto a votar.<br/>Escolha com sabedoria e foque em  `;
+            }else{
+                let falta = 16 - idade
+                msg.innerHTML += `Faltam ${falta} anos para que você possa votar. Nunca é cedo demais pra se manter informado. Aproveite este tempo para `;
+            }
+            msg.innerHTML += 'estudar sobre a politica, posicionamento e propostas dos candidatos.';
+        }
+    </script>
+</body>
+</html>

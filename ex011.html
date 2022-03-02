@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        div.wrapper
+        {
+            height: 100vh;
+        }
+        p
+        {
+            margin-top: 20vh;
+            padding-inline: 10px;
+        }
+        input
+        {
+            text-align: center;
+            width: 80px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+                <nav>
+                    <h1 style="margin: 0;">Exercício 011</h1>
+                </nav>
+        </header>
+        <section class="exercicios">
+            <p>Programa que lê os valores de A, B e C de uma equação do segundo grau e mostra o valor de Delta.</p>
+            <div class="barra_imput">
+                <input class="barra_imput" type="number" name="a" placeholder="a(x²)" autofocus>
+                <input class="barra_imput" type="number" name="b" placeholder="b(x)">
+                <input class="barra_imput" type="number" name="c" placeholder="c">
+            </div>
+            <button class="botao" name="botao" type="submit" title="calcular" onclick="calcular()">Calcular</button>
+            <div class="resultado">
+
+            </div>
+        </section>
+</body>
+        <footer>
+            <nav>
+                <a href="ex010.html"><img src="./imgs/back.png" alt="GitHub"></a>
+                <a href="index.html"><img src="./imgs/Home.png" alt="Facebook"></a>
+                <a href="ex012.html"><img src="./imgs/next.png" alt="Twitter"></a>
+            </nav>
+        </footer>
+    </div>
+    <script>
+        function calcular() {
+            let a = document.querySelector('input.barra_imput').value;
+            let b = document.querySelector('input.barra_imput').value;
+            let c = document.querySelector('input.barra_imput').value;
+            a = Number(a);
+            b = Number(b);
+            c = Number(c);
+            let delta = (b**2)-(4*a*c);
+            let msg = document.querySelector('div.resultado');
+            msg.innerHTML = `&Delta; = ${delta}`;
+        }
+    </script>
+</body>
+</html>

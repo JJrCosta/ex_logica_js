@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        div.wrapper
+        {
+            height: 100vh;
+        }
+        p
+        {
+            margin-top: 20vh;
+        }
+        input
+        {
+            text-align: center;
+        }
+        table {
+            margin: 20px;
+            border-collapse: collapse;
+        }
+        tr, td {
+            font-size: 1.1rem;
+            font-family: Arial, Helvetica, sans-serif;
+            letter-spacing: 1px;
+            border: 2px solid aliceblue;
+            width: 300px;
+            height: 35px;
+        }
+        input {
+            width: 100px;
+            height: 30px;
+            margin: 0;
+            background-color: transparent;
+            box-shadow: none;
+            border-style: none;
+            color: aliceblue;
+            text-align: center;
+            font-size: 1.3rem;
+        }
+        input::placeholder {
+            color: rgba(211, 211, 211, 0.50);
+            text-align: center;
+        }
+        div.media {
+            width: 100px;
+            height: 30px;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+                <nav>
+                    <h1 style="margin: 0;">Exercício 005</h1>
+                </nav>
+        </header>
+        <section class="exercicios">
+            <p>Programa que lê as duas notas de um aluno em uma matéria e mostra na tela a sua média.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <td colspan="2">
+                            Calculadora de médias
+                        </td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1º semestre</td>
+                        <td><input type="number" name="n2" id="n2" placeholder="nota" autofocus></td>
+                    </tr>
+                    <tr>
+                        <td>2º semestre</td>
+                        <td><input type="number" name="n1" id="n1" placeholder="nota"></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>Média Final</td>
+                        <td class="media" id="ex005">
+
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+            <button class="botao" name="botao" type="submit" title="calcular" onclick="calcular()">Calcular</button>
+        </section>
+</body>
+        <footer>
+            <nav>
+                <a href="ex004.html"><img src="./imgs/back.png" alt="GitHub"></a>
+                <a href="index.html"><img src="./imgs/Home.png" alt="Facebook"></a>
+                <a href="ex006.html"><img src="./imgs/next.png" alt="Twitter"></a>
+            </nav>
+        </footer>
+    </div>
+    <script>
+        function calcular() {
+            let n1 = document.getElementById('n1').value;
+            let n2 = document.getElementById('n2').value;
+            n1 = Number(n1);
+            n2 = Number(n2);
+            let media = (n1 + n2) / 2
+            let msg = document.getElementById('ex005');
+            msg.innerHTML = `<strong>${media}</strong>`;
+        }
+    </script>
+</body>
+</html>

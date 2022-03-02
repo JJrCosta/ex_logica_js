@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        div.wrapper
+        {
+            height: 100vh;
+        }
+        p
+        {
+            margin-top: 20vh;
+        }
+        input
+        {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+                <nav>
+                    <h1 style="margin: 0;">Exercício 004</h1>
+                </nav>
+        </header>
+        <section class="exercicios">
+            <p>Programa que lê dois números inteiros e mostra o somatório entre eles.</p>
+            <input class="barra_imput" type="number" name="n1" id="n1" placeholder="Digite um número?">
+            <input class="barra_imput" type="number" name="n2" id="n2" placeholder="Digite um número?">
+            <button class="botao" name="botao" type="submit" title="Somar" onclick="somar()">Somar</button>
+            <div class="resultado" id="ex004">
+
+            </div>
+        </section>
+</body>
+        <footer>
+            <nav>
+                <a href="ex003.html"><img src="./imgs/back.png" alt="GitHub"></a>
+                <a href="index.html"><img src="./imgs/Home.png" alt="Facebook"></a>
+                <a href="ex005.html"><img src="./imgs/next.png" alt="Twitter"></a>
+            </nav>
+        </footer>
+    </div>
+    <script>
+        function somar() {
+            let n1 = document.getElementById('n1').value;
+            let n2 = document.getElementById('n2').value;
+            n1 = Number(n1)
+            n2 = Number(n2)
+            let s = n1 + n2
+            let msg = document.getElementById('ex004');
+            msg.innerHTML = `A soma entre ${n1} e ${n2} é igual a <strong>${s}</strong>`;
+        }
+    </script>
+</body>
+</html>

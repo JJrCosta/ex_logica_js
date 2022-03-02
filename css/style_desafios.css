@@ -1,0 +1,149 @@
+@charset "UTF-8";
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+    font-size: 16px;
+    font-weight: 600;
+    color: black;
+    text-decoration: none;
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    text-align: center;   
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+div.wrapper
+{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    background-image: linear-gradient(180deg, rgb(203, 212, 71), rgb(255, 115, 0), rgb(203, 212, 71));
+    max-width: 350px;
+    height: 100vh;
+}
+p
+{
+    margin-top: 15vh;
+    padding-inline: 10px;
+}
+img
+{
+    max-width: 40px;
+    max-height: 40px;
+}
+h1
+{
+    font-size: 1.8rem;
+    font-weight: lighter;
+    padding: 15px;
+    margin-top: 60px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.30);
+}
+header
+{
+    background-image: linear-gradient(180deg,rgb(255, 0, 21), rgb(255, 115, 0));
+    position: fixed;
+    top: 0;
+    width: 300px;
+
+}
+header > nav
+{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+nav a
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 2px;
+    border-radius: 5px;
+    padding: 10px;
+}
+nav a:hover
+{
+    background-color: hsla(51, 100%, 50%, 0.75);
+}
+section.exercicios
+{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 300px;
+}
+section.exercicios h2
+{
+    font-size: 1.8rem;
+    font-weight: lighter;
+    margin: 30px 0;
+}
+section.exercicios > a, button
+{
+    background-color: aliceblue;
+    border-style: none;
+    border-radius: 25px 25px;
+    color: black;
+    padding: 8px;
+    margin: 15px;
+    box-shadow: 2px 2px 5px rgb(0, 0, 0);
+}
+section.exercicios > a:hover
+{
+    background-image: linear-gradient(90deg,  rgb(255, 115, 0), rgb(255, 0, 21));
+    transition: 300ms;
+}
+section.exercicios > button:hover
+{
+    background-image: linear-gradient(90deg,  rgb(255, 115, 0), rgb(255, 0, 21));
+}
+div#ex001
+{
+    font-size: 2rem;
+}
+section.nav_buttons
+{
+    margin-top: 150px;
+}
+.nav_buttons > a
+{
+    margin: 90px;
+}
+.resultado
+{
+    width: 300px;
+    padding: 15px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.20); 
+}
+input.barra_imput
+{
+    color: #212121;
+    border-style: none;
+    border-radius: 25px 25px;
+    padding: 5px 10px;
+    margin-top: 15px;
+    text-align: center;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.30); 
+}
+footer
+{
+    background-image: linear-gradient(180deg,  rgb(255, 115, 0), rgb(255, 0, 21));
+    position: fixed;
+    bottom: 0;
+    width: 300px;
+}
+footer > nav
+{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}

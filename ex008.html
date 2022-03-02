@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        div.wrapper
+        {
+            height: 100vh;
+        }
+        p
+        {
+            margin-top: 20vh;
+            padding-inline: 10px;
+        }
+        input
+        {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+                <nav>
+                    <h1 style="margin: 0;">Exercício 008</h1>
+                </nav>
+        </header>
+        <section class="exercicios">
+            <p>Programa que lê uma distância em metros e mostre os valores relativos em outras medidas.</p>
+            <input class="barra_imput" type="number" name="dist" id="dist" placeholder="Digite a distância" autofocus>
+            <button class="botao" name="botao" type="submit" title="calcular" onclick="calcular()">Calcular</button>
+            <div class="resultado" id="ex008">
+
+            </div>
+        </section>
+</body>
+        <footer>
+            <nav>
+                <a href="ex007.html"><img src="./imgs/back.png" alt="GitHub"></a>
+                <a href="index.html"><img src="./imgs/Home.png" alt="Facebook"></a>
+                <a href="ex009.html"><img src="./imgs/next.png" alt="Twitter"></a>
+            </nav>
+        </footer>
+    </div>
+    <script>
+        function calcular() {
+            let dist = document.getElementById('dist').value;
+            dist = Number(dist);
+            let msg = document.querySelector('div.resultado');
+            msg.innerHTML = `${dist}METROS correspondem a: <br/>
+            ${dist/1000}Km <br/>
+            ${dist/100}Hm <br/>
+            ${dist/10}Dam <br/>
+            ${dist*10}dm <br/>
+            ${dist*100}cm <br/>
+            ${dist*1000}mm <br/>
+            `;
+        }
+    </script>
+</body>
+</html>

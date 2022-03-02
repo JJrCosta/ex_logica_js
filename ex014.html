@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        div.wrapper
+        {
+            height: 100vh;
+        }
+        p
+        {
+            margin-top: 20vh;
+            padding-inline: 10px;
+        }
+        input
+        {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+                <nav>
+                    <h1 style="margin: 0;">Exercício 014</h1>
+                </nav>
+        </header>
+        <section class="exercicios">
+            <p>Programa que pergunta a quantidade de Km percorridos por um carro alugado e a quantidade de dias pelos quais ele foi alugado. Calcula o preço total a pagar, sabendo que o carro custa R$90,00 por dia e R$0,20 por Km rodado.</p>
+            <div class="barra_imput">
+                <input class="barra_imput" type="number" name="dist" id="dist" placeholder="Distância em Km" autofocus>
+                <input class="barra_imput" type="number" name="dias" id="dias" placeholder="Dias Corridos">
+            </div>
+            <button class="botao" name="botao" type="submit" title="calcular" onclick="calcular()">Calcular</button>
+            <div class="resultado">
+
+            </div>
+        </section>
+</body>
+        <footer>
+            <nav>
+                <a href="ex013.html"><img src="./imgs/back.png" alt="GitHub"></a>
+                <a href="index.html"><img src="./imgs/Home.png" alt="Facebook"></a>
+                <a href="ex015.html"><img src="./imgs/next.png" alt="Twitter"></a>
+            </nav>
+        </footer>
+    </div>
+    <script>
+        function calcular() {
+            let dist = document.getElementById('dist').value;
+            let dias = document.getElementById('dias').value;
+            dist = Number(dist);
+            dias = Number(dias);
+            let val = (dist*0.2)+(dias*90);
+            let msg = document.querySelector('div.resultado');
+            msg.innerHTML = `ORÇAMENTO DE LOCAÇÂO DE VEÍCULO<br/> Valor do orçamento para ${dias} dias e ${dist} Km rodados:<br/> R$ ${val.toFixed(2)}`;
+        }
+    </script>
+</body>
+</html>

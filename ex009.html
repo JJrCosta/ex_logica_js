@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        div.wrapper
+        {
+            height: 100vh;
+        }
+        p
+        {
+            margin-top: 20vh;
+            padding-inline: 10px;
+        }
+        input
+        {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+                <nav>
+                    <h1 style="margin: 0;">Exercício 009</h1>
+                </nav>
+        </header>
+        <section class="exercicios">
+            <p>Programa que lê quanto dinheiro uma pessoa tem na carteira (em R$)
+                e mostra quantos dólares ela pode comprar.</p>
+            <input class="barra_imput" type="number" name="valor" id="valor" placeholder="Valor R$" autofocus>
+            <button class="botao" name="botao" type="submit" title="calcular" onclick="calcular()">Calcular</button>
+            <div class="resultado">
+
+            </div>
+        </section>
+</body>
+        <footer>
+            <nav>
+                <a href="ex008.html"><img src="./imgs/back.png" alt="GitHub"></a>
+                <a href="index.html"><img src="./imgs/Home.png" alt="Facebook"></a>
+                <a href="ex010.html"><img src="./imgs/next.png" alt="Twitter"></a>
+            </nav>
+        </footer>
+    </div>
+    <script>
+        function calcular() {
+            let val = document.getElementById('valor').value;
+            val = Number(val);
+            let dol = 5.16
+            let res = val / dol 
+            let msg = document.querySelector('div.resultado');
+            msg.innerHTML = `Cotação atual do Dolar: <br/>
+            US$ ${dol}<br/>
+            R$ ${val} equivalem a Us$ ${res}`;
+        }
+    </script>
+</body>
+</html>

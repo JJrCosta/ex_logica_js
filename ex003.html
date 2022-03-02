@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        div.wrapper
+        {
+            height: 100vh;
+        }
+        p
+        {
+            margin-top: 20vh;
+            padding-inline: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+                <nav>
+                    <h1 style="margin: 0;">Exercício 003</h1>
+                </nav>
+        </header>
+        <section class="exercicios">
+            <p>Programa que lê o nome e o salário de um funcionário, mostrando no final uma mensagem.</p>
+            <input class="barra_imput" type="text" name="txtName3" id="txtName3" placeholder="Digite seu nome?">
+            <input class="barra_imput" type="number" name="sal3" id="sal3" placeholder="Informe o salário?">
+            <button class="botao3" name="botao" type="submit" title="Clique Aqui" onclick="exibir()">Clique</button>
+            <div class="resultado" id="ex003">
+
+            </div>
+        </section>
+</body>
+        <footer>
+            <nav>
+                <a href="ex002.html"><img src="./imgs/back.png" alt="GitHub"></a>
+                <a href="index.html"><img src="./imgs/Home.png" alt="Facebook"></a>
+                <a href="ex004.html"><img src="./imgs/next.png" alt="Twitter"></a>
+            </nav>
+        </footer>
+    </div>
+    <script>
+        function exibir() {
+            let nome = document.getElementById('txtName3');
+            let sal = document.getElementById('sal3');
+            let msg = document.getElementById('ex003');
+            msg.innerText = `Funcionário ${nome.value} tem o salário atual de R$ ${sal.value}.`;
+        }
+    </script>
+</body>
+</html>

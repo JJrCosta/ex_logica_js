@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        div.wrapper
+        {
+            height: 100vh;
+        }
+        p
+        {
+            margin-top: 20vh;
+            padding-inline: 10px;
+        }
+        input
+        {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+                <nav>
+                    <h1 style="margin: 0;">Exercício 010</h1>
+                </nav>
+        </header>
+        <section class="exercicios">
+            <p>Programa que lê a largura e altura de uma parede, calcula e mostra a área a ser pintada e a quantidade de tinta necessária para o serviço, sabendo que cada litro de tinta pinta uma área de 2 m².</p>
+            <input class="barra_imput" type="number" name="largura" id="largura" placeholder="Largura M" autofocus>
+            <input class="barra_imput" type="number" name="altura" id="altura" placeholder="Altura M">
+            <button class="botao" name="botao" type="submit" title="calcular" onclick="calcular()">Calcular</button>
+            <div class="resultado">
+
+            </div>
+        </section>
+</body>
+        <footer>
+            <nav>
+                <a href="ex009.html"><img src="./imgs/back.png" alt="GitHub"></a>
+                <a href="index.html"><img src="./imgs/Home.png" alt="Facebook"></a>
+                <a href="ex011.html"><img src="./imgs/next.png" alt="Twitter"></a>
+            </nav>
+        </footer>
+    </div>
+    <script>
+        function calcular() {
+            let largura = document.getElementById('largura').value;
+            let altura = document.getElementById('altura').value;
+            largura = Number(largura);
+            altura = Number(altura);
+            let area = largura*altura;
+            let tinta = area/2;
+            let msg = document.querySelector('div.resultado');
+            msg.innerHTML = `Área total: <br/>
+            ${area} m²<br/>
+            Serão necessários ${tinta} Litros de tinta para a cobertura.`;
+        }
+    </script>
+</body>
+</html>

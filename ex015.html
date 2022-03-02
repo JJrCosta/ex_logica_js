@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        div.wrapper
+        {
+            height: 100vh;
+        }
+        p
+        {
+            margin-top: 20vh;
+            padding-inline: 10px;
+        }
+        input
+        {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+                <nav>
+                    <h1 style="margin: 0;">Exercício 015</h1>
+                </nav>
+        </header>
+        <section class="exercicios">
+            <p>Programa que lê o número de dias trabalhados em um mês e mostra o salário de um funcionário, sabendo que ele trabalha 8 horas por dia e ganha R$25,00 por hora trabalhada.</p>
+            <div class="barra_imput">
+                <input class="barra_imput" type="number" name="dias" id="dias" placeholder="Dias Trabalhados" autofocus>
+            </div>
+            <button class="botao" name="botao" type="submit" title="calcular" onclick="calcular()">Calcular</button>
+            <div class="resultado">
+
+            </div>
+        </section>
+</body>
+        <footer>
+            <nav>
+                <a href="ex014.html"><img src="./imgs/back.png" alt="GitHub"></a>
+                <a href="index.html"><img src="./imgs/Home.png" alt="Facebook"></a>
+                <a href="ex016.html"><img src="./imgs/next.png" alt="Twitter"></a>
+            </nav>
+        </footer>
+    </div>
+    <script>
+        function calcular() {
+            let dias = document.getElementById('dias').value;
+            dias = Number(dias);
+            let sal = (dias*(25*8));
+            let msg = document.querySelector('div.resultado');
+            msg.innerHTML = `Dias trabalhados: ${dias} dias<br/>Salário: R$ ${sal.toFixed(2)}`;
+        }
+    </script>
+</body>
+</html>

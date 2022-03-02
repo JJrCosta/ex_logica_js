@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        div.wrapper
+        {
+            height: 100vh;
+        }
+        p
+        {
+            margin-top: 20vh;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+                <nav>
+                    <h1 style="margin: 0;">Exercício 002</h1>
+                </nav>
+        </header>
+        <section class="exercicios">
+            <p>Programa que lê o nome de uma pessoa e mostra uma mensagem de boas vindas.</p>
+            <input class="barra_imput"type="text" name="txtName" id="txtName" placeholder="Qual é o seu nome?" autofocus>
+            <button class="botao2" name="botao" type="submit" title="Clique Aqui" onclick="exibir()">Clique</button>
+            <div class="resultado" id="ex002">
+
+            </div>
+        </section>
+    </div>
+    <script>
+        function exibir() {
+        let nome = document.getElementById('txtName');
+        let msg = document.getElementById('ex002');
+        msg.innerText = `Olá, ${nome.value}! É um prazer te conhecer.`;
+        }
+    </script>
+</body>
+        <footer>
+            <nav>
+                <a href="ex001.html"><img src="./imgs/back.png" alt="GitHub"></a>
+                <a href="index.html"><img src="./imgs/Home.png" alt="Facebook"></a>
+                <a href="ex003.html"><img src="./imgs/next.png" alt="Twitter"></a>
+            </nav>
+        </footer>
+    </div>
+    <script>
+        function exibir1() {
+            let msg = document.getElementById('ex001');
+            msg.innerText = 'Olá, Mundo!';
+        }
+    </script>
+</body>
+</html>

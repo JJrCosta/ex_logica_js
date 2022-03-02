@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios</title>
+    <link rel="stylesheet" href="css/style_desafios.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+                <nav>
+                    <h1 style="margin: 0;">DESAFIO 01</h1>
+                </nav>
+        </header>
+        <section class="exercicios">
+            <p>Programa para calcular a redução do tempo de vida de um fumante. Pergunte a quantidade de cigarros fumados por dias e quantos anos ele já fumou. Considere que um fumante perde 10 min de vida a cada cigarro. Calcule quantos dias de vida um fumante perderá e exiba o total em dias.</p>
+            <div class="barra_imput">
+                <input class="barra_imput" type="number" name="cigarros" id="cigarros" placeholder="Consumo/dia" autofocus>
+                <input class="barra_imput" type="number" name="anos" id="anos" placeholder="Periodo/Ano(s)">
+            </div>
+            <button class="botao" name="botao" type="submit" title="calcular" onclick="calcular()">Calcular</button>
+            <div class="resultado">
+
+            </div>
+        </section>
+</body>
+        <footer>
+            <nav>
+                <a href="ex015.html"><img src="./imgs/back.png" alt="GitHub"></a>
+                <a href="index.html"><img src="./imgs/Home.png" alt="Facebook"></a>
+                <a href="ex017.html"><img src="./imgs/next.png" alt="Twitter"></a>
+            </nav>
+        </footer>
+    </div>
+    <script>
+        function calcular() {
+            let cigarros = document.getElementById('cigarros').value;
+            let anos = document.getElementById('anos').value;
+            cigarros = Number(cigarros);
+            anos = Number(anos);
+            cigarros *= 10;
+            let dias = (anos*365); //transforma o total de anos em dias.
+            let reduc = (dias*cigarros)/60/24 //Contabiliza os minutos e transforma de volta em dias.
+            let msg = document.querySelector('div.resultado');
+            msg.innerHTML = `Redução de tempo de vida:<br/>${reduc.toFixed(2)} dias`;
+        }
+    </script>
+</body>
+</html>

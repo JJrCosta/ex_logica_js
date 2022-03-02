@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        div.wrapper
+        {
+            height: 100vh;
+        }
+        p
+        {
+            margin-top: 20vh;
+        }
+        input
+        {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+                <nav>
+                    <h1 style="margin: 0;">Exercício 020</h1>
+                </nav>
+        </header>
+        <section class="exercicios">
+            <p>Programa que lê um número inteiro e mostre se ele é PAR ou ÍMPAR.</p>
+            <input class="barra_imput" type="number" name="n" id="n" placeholder="Digite um número" autofocus>
+            <button class="botao" name="botao" type="submit" title="Clique Aqui" onclick="verificar()">Clique</button>
+            <div class="resultado">
+
+            </div>
+        </section>
+</body>
+        <footer>
+            <nav>
+                <a href="ex019.html"><img src="./imgs/back.png" alt="GitHub"></a>
+                <a href="index.html"><img src="./imgs/Home.png" alt="Facebook"></a>
+                <a href="ex021.html"><img src="./imgs/next.png" alt="Twitter"></a>
+            </nav>
+        </footer>
+    </div>
+    <script>
+        const msg = document.querySelector('div.resultado');
+        function verificar() {
+            let n = document.getElementById('n').value;
+            n = Number(n);
+            if (n % 1 === 0) {
+                if (n % 2 === 0) {
+                    msg.innerHTML = `O número ${n} é PAR.`;
+                } else {
+                    msg.innerHTML = `O número ${n} é IMPAR.`;
+                }
+            }else{
+                msg.innerHTML = `BRINCA DIREITO...<br/>O número ${n} não é um número inteiro.`;
+            }            
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        div.wrapper
+        {
+            height: 100vh;
+        }
+        p
+        {
+            margin-top: 20vh;
+            padding-inline: 10px;
+        }
+        input
+        {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+                <nav>
+                    <h1 style="margin: 0;">Exercício 012</h1>
+                </nav>
+        </header>
+        <section class="exercicios">
+            <p>Programa que lê o preço de um produto e calcula o seu PREÇO PROMOCIONAL, com 5% de desconto.</p>
+            <div class="barra_imput">
+                <input class="barra_imput" type="number" name="val" placeholder="Valor do Produto" autofocus>
+            </div>
+            <button class="botao" name="botao" type="submit" title="calcular" onclick="calcular()">Calcular</button>
+            <div class="resultado">
+
+            </div>
+        </section>
+</body>
+        <footer>
+            <nav>
+                <a href="ex011.html"><img src="./imgs/back.png" alt="GitHub"></a>
+                <a href="index.html"><img src="./imgs/Home.png" alt="Facebook"></a>
+                <a href="ex013.html"><img src="./imgs/next.png" alt="Twitter"></a>
+            </nav>
+        </footer>
+    </div>
+    <script>
+        function calcular() {
+            let val = document.querySelector('input.barra_imput').value;
+            val = Number(val);
+            let desc = val * 0.05;
+            let val2 = val - desc;
+            let msg = document.querySelector('div.resultado');
+            msg.innerHTML = `PRODUTO EM PROMOÇÂO!<br/> Valor cheio: R$ ${val.toFixed(2)}<br/> Você recebeu R$ ${desc.toFixed(2)} de desconto e seu produto sairá por: <br/>R$ ${val2.toFixed(2)}`;
+        }
+    </script>
+</body>
+</html>
