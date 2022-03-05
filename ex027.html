@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        div.wrapper
+        {
+            height: 100vh;
+        }
+        p
+        {
+            margin-top: 20vh;
+        }
+        input
+        {
+            text-align: center;
+        }
+        table {
+            margin: 20px 10px;
+            border-collapse: collapse;
+        }
+        tr, td, th {
+            font-family: Arial, Helvetica, sans-serif;
+            letter-spacing: 1px;
+            border: 2px solid aliceblue;
+            width: 300px;
+            height: 35px;
+        }
+        input {
+            width: 120px;
+            height: 30px;
+            margin: 0;
+            background-color: transparent;
+            box-shadow: none;
+            border-style: none;
+            color: aliceblue;
+            text-align: center;
+            font-size: 1.3rem;
+        }
+        input#nome
+        {
+            width: 250px;
+            height: 30px;
+        }
+        input::placeholder {
+            color: rgba(211, 211, 211, 0.50);
+            text-align: center;
+        }
+        div.situacao {
+            width: 100px;
+            height: 30px;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+                <nav>
+                    <h1 style="margin: 0;">Exercício 027</h1>
+                </nav>
+        </header>
+        <section class="exercicios">
+            <p>Programa que lê duas notas de um aluno e calcula a sua média, mostrando uma mensagem no final, de acordo com a média atingida.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="2">Calculadora de médias</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1º SEM</td>
+                        <td><input type="number" name="n2" id="n2" placeholder="nota 1" autofocus></td>
+                    </tr>
+                    <tr>
+                        <td>2º SEM</td>
+                        <td><input type="number" name="n1" id="n1" placeholder="nota 2"></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>Média Final</td>
+                        <td class="situacao" id="media">
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Situação</td>
+                        <td  class="situacao" id="result">
+
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+            <button class="botao" name="botao" type="submit" title="calcular" onclick="calcular()">Calcular</button>
+        </section>
+</body>
+        <footer>
+            <nav>
+                <a href="ex026.html"><img src="./imgs/back.png" alt="Voltar"></a>
+                <a href="index.html"><img src="./imgs/Home.png" alt="Home"></a>
+                <a href="ex028.html"><img src="./imgs/next.png" alt="Proximo"></a>
+            </nav>
+        </footer>
+    </div>
+    <script>
+        function calcular() {
+            const msg1 = document.getElementById('media')
+            const msg2 = document.getElementById('result')
+            let n1 = document.getElementById('n1').value;
+            let n2 = document.getElementById('n2').value;
+            n1 = Number(n1);
+            n2 = Number(n2);
+            let media = (n1 + n2) / 2;
+
+            if (media >= 7){    
+                msg1.innerHTML = `<strong>${media}</strong>`;
+                msg2.innerHTML = 'APROVADO';
+            }else if (media < 5){
+                msg1.innerHTML = `<strong>${media}</strong>`;
+                msg2.innerHTML = 'REPROVADO';
+            }else{
+                msg1.innerHTML = `<strong>${media}</strong>`;
+                msg2.innerHTML = 'RECUPERAÇÃO';
+            }      
+        }
+    </script>
+</body>
+</html>
