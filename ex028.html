@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        div.wrapper
+        {
+            height: 100vh;
+        }
+        p
+        {
+            margin-top: 15vh;
+            padding: 10px;
+        }
+        input
+        {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+                <nav>
+                    <h1 style="margin: 0;">Exercício 028</h1>
+                </nav>
+        </header>
+        <section class="exercicios">
+            <p>Programa que lê a largura e o comprimento de um terreno retangular, calculando e mostrando a sua área em m². O programa também devemostrar a classificação desse terreno.</p>
+            <input class="barra_imput" type="number" name="n1" placeholder="Largura em m">
+            <input class="barra_imput" type="number" name="n2" placeholder="Comprimento em m">
+            <button class="botao" name="botao" type="submit" title="calcular" onclick="calcular()">calcular</button>
+            <div class="resultado">
+
+            </div>
+        </section>
+</body>
+        <footer>
+            <nav>
+                <a href="ex027.html"><img src="./imgs/back.png" alt="Voltar"></a>
+                <a href="index.html"><img src="./imgs/Home.png" alt="Home"></a>
+                <a href="ex029.html"><img src="./imgs/next.png" alt="Proximo"></a>
+            </nav>
+        </footer>
+    </div>
+    <script>
+        function calcular() {
+            const msg = document.querySelector('div[class=resultado');
+            let n1 = document.querySelector('input[name=n1]').value;
+            let n2 = document.querySelector('input[name=n2]').value;
+            n1 = Number(n1);
+            n2 = Number(n2);
+            const area = n1 * n2;
+            if ( area < 100 ){
+                msg.innerHTML = `<br/> Área Total: ${area} m²<br/> Classificação: TERRENO POPULAR`;
+            }else if (area > 500){
+                msg.innerHTML = `<br/> Área Total: ${area} m²<br/> Classificação: TERRENO VIP`;
+            }else{
+                msg.innerHTML = `<br/> Área Total: ${area} m²<br/> Classificação: TERRENO MASTER`;
+            }
+        }
+    </script>
+</body>
+</html>
