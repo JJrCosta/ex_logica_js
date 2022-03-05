@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        div.wrapper
+        {
+            height: 100vh;
+        }
+        p.descrip
+        {
+            margin-top: 10vh;
+            padding-inline: 10px;
+        }
+        input
+        {
+            text-align: center;
+            
+        }
+        div.genero
+        {
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            border: 1px solid white;
+            border-radius: 10px;
+            margin-top: 15px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+                <nav>
+                    <h1 style="margin: 0;">Exercício 024</h1>
+                </nav>
+        </header>
+        <section class="exercicios">
+            <p class="descrip">Programa que pergunta a distância que um passageiro deseja percorrer em Km. Calcula o preço da passagem, cobrando R$0.50 por Km para viagens até 200Km e R$0.45 para viagens mais longas.</p>
+            <div class="barra_imput">
+                <input class="barra_imput" type="number" name="dist" placeholder="Distância em Km" autofocus>
+            </div>
+            <button class="botao" name="botao" type="submit" title="calcular" onclick="calcular()">Calcular</button>
+            <div class="resultado">
+
+            </div>
+        </section>
+</body>
+        <footer>
+            <nav>
+                <a href="ex023.html"><img src="./imgs/back.png" alt="GitHub"></a>
+                <a href="index.html"><img src="./imgs/Home.png" alt="Facebook"></a>
+                <a href="ex025.html"><img src="./imgs/next.png" alt="Twitter"></a>
+            </nav>
+        </footer>
+    </div>
+    <script>
+        const msg = document.querySelector('div.resultado');
+        function calcular() {
+            let dist = document.querySelector('input.barra_imput').value;
+            dist = Number(dist);
+            if (dist <= 200) {
+                dist *= 0.5; 
+            } else {
+                dist *= 0.45; 
+            }
+            msg.innerHTML += `<br/>Valor da passagem: R$ ${dist.toFixed(2)}<br/>`; 
+        }
+    </script>
+</body>
+</html>
