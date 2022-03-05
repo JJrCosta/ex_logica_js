@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        div.wrapper
+        {
+            height: 100vh;
+        }
+        p
+        {
+            margin-top: 20vh;
+        }
+        input
+        {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+                <nav>
+                    <h1 style="margin: 0;">Exercício 026</h1>
+                </nav>
+        </header>
+        <section class="exercicios">
+            <p>Programa que lê dois números inteiros e mostra o somatório entre eles.</p>
+            <input class="barra_imput" type="number" name="n1" placeholder="Digite um número?">
+            <input class="barra_imput" type="number" name="n2" placeholder="Digite um número?">
+            <button class="botao" name="botao" type="submit" title="Verificar" onclick="verificar()">Verificar</button>
+            <div class="resultado" id="ex004">
+
+            </div>
+        </section>
+</body>
+        <footer>
+            <nav>
+                <a href="ex025.html"><img src="./imgs/back.png" alt="Voltar"></a>
+                <a href="index.html"><img src="./imgs/Home.png" alt="Home"></a>
+                <a href="ex027.html"><img src="./imgs/next.png" alt="Proximo"></a>
+            </nav>
+        </footer>
+    </div>
+    <script>
+        function verificar() {
+            const msg = document.querySelector('div[class=resultado');
+            let n1 = document.querySelector('input[name=n1]').value;
+            let n2 = document.querySelector('input[name=n2]').value;
+            n1 = Number(n1);
+            n2 = Number(n2);
+            if (n1 > n2){
+                msg.innerHTML = `<br/> ${n1} > ${n2}<br/>O primeiro valor é maior.`;
+            }else if (n2 > n1){
+                msg.innerHTML = `<br/> ${n1} < ${n2}<br/>O segundo valor é maior.`;
+            }else{
+                msg.innerHTML = `<br/> ${n1} = ${n2}<br/>Os valores são iguais.`;
+            }
+        }
+    </script>
+</body>
+</html>
