@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        div.wrapper
+        {
+            height: 100vh;
+        }
+        p
+        {
+            margin-top: 10vh;
+            padding: 10px;
+        }
+        input
+        {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+                <nav>
+                    <h1 style="margin: 0;">Exercício 029</h1>
+                </nav>
+        </header>
+        <section class="exercicios">
+            <p>Programa que lê o nome de um funcionário, seu salário, quantos anos ele trabalha na empresa e mostra seu novo salário.</p>
+            <input class="barra_imput" type="text" name="nome" placeholder="Digite seu nome">
+            <input class="barra_imput" type="number" name="sal" placeholder="Salário Atual">
+            <input class="barra_imput" type="number" name="tempo" placeholder="Tempo de Empresa">
+            <button class="botao" name="botao" type="submit" title="calcular" onclick="calcular()">calcular</button>
+            <div class="resultado">
+
+            </div>
+        </section>
+</body>
+        <footer>
+            <nav>
+                <a href="ex028.html"><img src="./imgs/back.png" alt="Voltar"></a>
+                <a href="index.html"><img src="./imgs/Home.png" alt="Home"></a>
+                <a href="ex030.html"><img src="./imgs/next.png" alt="Proximo"></a>
+            </nav>
+        </footer>
+    </div>
+    <script>
+        function calcular() {
+            const msg = document.querySelector('div[class=resultado');
+            const nome = document.querySelector('input[name=nome]').value;
+            let tempo = document.querySelector('input[name=tempo]').value;
+            let sal = document.querySelector('input[name=sal]').value;
+            let reajuste = 0;
+            sal = Number(sal);
+            tempo = Number(tempo);
+            if (tempo < 3){
+                reajuste = sal * 1.03;
+            }else if (tempo >= 10){
+                reajuste = sal * 1.20;
+            }else{
+                reajuste = sal * 1.125;
+            }
+            msg.innerHTML = `<br/>REAJUSTE SALARIAL<br/> <br/>Funcionário: ${nome} <br/> Salário anterior: R$ ${sal.toFixed(2)}<br/> Tempo de Empresa: ${tempo} anos <br/> Novo Salário: R$ ${reajuste.toFixed(2)}`;
+        }
+    </script>
+</body>
+</html>
