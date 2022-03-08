@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        div.wrapper
+        {
+            height: 100vh;
+        }
+        p
+        {
+            margin-top: 20vh;
+            padding: 10px;
+            font-size: 1.5rem;
+        }
+        input
+        {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+                <nav>
+                    <h1 style="margin: 0;">Exercício 034</h1>
+                </nav>
+        </header>
+        <section class="exercicios">
+            <p>Calculadora de IMC</p>
+            <!--O Índice de Massa Corpórea (IMC) é um valor calculado baseado na altura e no
+                peso de uma pessoa. De acordo com o valor do IMC, podemos classificar o
+                indivíduo dentro de certas faixas.
+                - abaixo de 18.5: Abaixo do peso
+                - entre 18.5 e 25: Peso ideal
+                - entre 25 e 30: Sobrepeso
+                - entre 30 e 40: Obesidade
+                - acima de 40: Obseidade
+                Obs: O IMC é calculado pela expressão peso/altura² (peso dividido pelo quadrado
+                da altura)-->
+            <input class="barra_imput" type="number" name="altura" placeholder="Altura em metros">
+            <input class="barra_imput" type="number" name="peso" placeholder="Peso em Kg">
+            <button class="botao" name="botao" type="submit" title="calcular" onclick="calcular()">calcular</button>
+            <div class="resultado">
+
+            </div>
+        </section>
+</body>
+        <footer>
+            <nav>
+                <a href="ex033.html"><img src="./imgs/back.png" alt="Voltar"></a>
+                <a href="index.html"><img src="./imgs/Home.png" alt="Home"></a>
+                <a href="ex035.html"><img src="./imgs/next.png" alt="Proximo"></a>
+            </nav>
+        </footer>
+    </div>
+    <script src="./js/ex034.js"></script>
+</body>
+</html>
