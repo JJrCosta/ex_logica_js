@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        div.wrapper
+        {
+            height: 100vh;
+        }
+        p
+        {
+            margin-top: 10vh;
+            padding: 10px;
+        }
+        input
+        {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+                <nav>
+                    <h1 style="margin: 0;">Exercício 033</h1>
+                </nav>
+        </header>
+        <section class="exercicios">
+            <p>Programa para aprovar ou não o empréstimo bancário para a compra de uma casa.</p> <!--O programa vai perguntar o valor da casa, o salário do comprador e em quantos anos ele vai pagar apos isso calcular o valor da prestação mensal, sabendo que ela não pode exceder 30% do salário ou então o empréstimo será negado.-->
+            <input class="barra_imput" type="number" name="valorImovel" placeholder="Valor do imóvel">
+            <input class="barra_imput" type="number" name="parcela" placeholder="Quantos anos?">
+            <input class="barra_imput" type="number" name="sal" placeholder="Salário atual">
+            <button class="botao" name="botao" type="submit" title="calcular" onclick="calcular()">calcular</button>
+            <div class="resultado">
+
+            </div>
+        </section>
+</body>
+        <footer>
+            <nav>
+                <a href="ex032.html"><img src="./imgs/back.png" alt="Voltar"></a>
+                <a href="index.html"><img src="./imgs/Home.png" alt="Home"></a>
+                <a href="ex034.html"><img src="./imgs/next.png" alt="Proximo"></a>
+            </nav>
+        </footer>
+    </div>
+    <script src="./js/ex033.js"></script>
+</body>
+</html>
